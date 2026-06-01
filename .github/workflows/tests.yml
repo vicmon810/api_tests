@@ -1,4 +1,4 @@
-name: API Test 
+name: API Test
 
 on:
   push:
@@ -9,16 +9,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout respository 
-        uses: actions/checkout@v4 
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Set up Python 
+      - name: Set up Python
         uses: actions/setup-python@v5
-        with: 
+        with:
           python-version: "3.11"
 
       - name: Install dependencies
-          run pip install -r requirements.txt 
-      
+        run: pip install -r requirements.txt
+
       - name: Run Pytest
-          run pytest 
+        run: pytest
